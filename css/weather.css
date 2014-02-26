@@ -37,3 +37,8 @@
 .weatherjs ul li {
     padding: 4px;
 }
+
+.weatherjs .error {
+    color: #F08080;
+    font-weight: bold;
+}
