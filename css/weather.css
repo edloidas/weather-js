@@ -1,0 +1,39 @@
+.weatherjs {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background: #F5F5F5;
+    color: #333;
+    border: 1px solid #999;
+    overflow: hidden;
+}
+
+.weatherjs h2 {
+    margin: 10px 0 0;
+}
+
+.weatherjs .icon {
+    width: 200px;
+    margin-top: -35px;
+    position: absolute;
+}
+
+.weatherjs .icon img {
+    display: block;
+    float: right;
+    width: 50px;
+    height: 50px;
+}
+
+.weatherjs ul {
+    color: #555;
+    font-weight: bold;
+    font-size: 0.9em;
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.weatherjs ul li {
+    padding: 4px;
+}

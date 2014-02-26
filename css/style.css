@@ -1,0 +1,53 @@
+/*
+ * Common
+ */
+html {
+    height: 100%;
+}
+
+html, body {
+    background: #333;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #F5F5F5;
+    font-size: 14px;
+    font-family: Arial, Tahoma, Helvetica, monospace;
+}
+
+/*
+ * Page header
+ */
+header {
+    text-align: center;
+}
+
+header a {
+    color: #87CEEB;
+}
+
+header a:active {
+    color: #F08080;
+}
+
+header a:visited {
+    color: #B0C4DE;
+}
+
+/*
+ * Widgets holder
+ */
+.holder {
+    margin: 0 auto;
+    padding: 30px 0 0;
+}
+
+/*
+ * Small hack only for the demo, so the
+ * widgets can be positioned in the center.
+ */
+.holder .weatherjs {
+    margin: 0 auto;
+}
