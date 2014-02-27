@@ -6,6 +6,9 @@
     color: #333;
     border: 1px solid #999;
     overflow: hidden;
+    -webkit-box-shadow: 6px 6px 3px 0px #111;
+    -moz-box-shadow:    4px 4px 3px 0px #222;
+    box-shadow:         6px 6px 3px 0px #111;
 }
 
 .weatherjs h2 {
@@ -13,13 +16,10 @@
 }
 
 .weatherjs .icon {
-    width: 200px;
-    margin-top: -35px;
-    position: absolute;
+    position: relative;
 }
 
 .weatherjs .icon img {
-    display: block;
     float: right;
     width: 50px;
     height: 50px;
@@ -31,7 +31,7 @@
     font-size: 0.9em;
     list-style-type: none;
     padding: 0;
-    margin: 20px 0 0;
+    margin: 10px 0 0;
 }
 
 .weatherjs ul li {
