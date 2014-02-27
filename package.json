@@ -1,0 +1,35 @@
+{
+    "name": "weather-js",
+    "version": "0.0.1",
+    "description": "A simple weather widget.",
+    "devDependencies": {
+        "grunt": "~0.4.2",
+        "grunt-newer": "~0.4.1",
+        "load-grunt-config": "~0.7.1",
+        "grunt-concurrent": "~0.4.3",
+        "grunt-contrib-jshint": "~0.7.2",
+        "grunt-contrib-concat": "~0.3.0",
+        "grunt-contrib-watch": "~0.5.3",
+        "grunt-contrib-uglify": "~0.2.7"
+    },
+    "dependencies": {
+        "time-grunt": "*"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/edloidas/weather-js.git"
+    },
+    "keywords": [
+        "weather", "widget"
+    ],
+    "author": "edloidas",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/edloidas/weather-js/issues"
+    },
+    "homepage": "https://github.com/edloidas/weather-js"
+}
