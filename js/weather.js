@@ -52,27 +52,27 @@ WeatherJS.prototype.Widget = function ( location ) {
             this.dom.appendChild( icon );
 
             // temp
-            li.innerText = "Temperature: " + ( Math.round(this.data.main.temp) || "0" ) + "°C";
+            li.innerHTML = "Temperature: " + ( Math.round(this.data.main.temp) || "0" ) + "°C";
             ul.appendChild( li );
             // status
             li = document.createElement('li');
-            li.innerText = "Status: " + ( this.data.weather[0].main || "unknown" );
+            li.innerHTML = "Status: " + ( this.data.weather[0].main || "unknown" );
             ul.appendChild( li );
             // pressure
             li = document.createElement('li');
-            li.innerText = "Pressure: " + ( this.data.main.pressure || "0" ) + " atm";
+            li.innerHTML = "Pressure: " + ( this.data.main.pressure || "0" ) + " atm";
             ul.appendChild( li );
             // Humidity
             li = document.createElement('li');
-            li.innerText = "Humidity: " + ( this.data.main.humidity || "0" ) + "%";
+            li.innerHTML = "Humidity: " + ( this.data.main.humidity || "0" ) + "%";
             ul.appendChild( li );
             // Wind
             li = document.createElement('li');
-            li.innerText = "Wind: " + ( this.data.wind.speed || "0" ) + " m/s";
+            li.innerHTML = "Wind: " + ( this.data.wind.speed || "0" ) + " m/s";
             ul.appendChild( li );
             // Clouds
             li = document.createElement('li');
-            li.innerText = "Clouds: " + ( this.data.clouds.all || "0" ) + "%";
+            li.innerHTML = "Clouds: " + ( this.data.clouds.all || "0" ) + "%";
             ul.appendChild( li );
 
             this.dom.appendChild( ul );
@@ -132,4 +132,3 @@ WeatherJS.prototype.deleteWidget = function ( widgetId ) {
 };
 
 window.$weatherjs = new WeatherJS();
-Object.defineProperty( window, '$weatherjs', { writable: false } );
