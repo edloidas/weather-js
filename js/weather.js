@@ -8,7 +8,7 @@ function WeatherJS () {
 
     this.widgets = {};
 
-    // auto-update each 1s
+    // auto-update
     setInterval( function () {
         for ( var key in self.widgets ) {
             self.widgets[ key ].update();
@@ -25,6 +25,7 @@ WeatherJS.prototype.Widget = function ( location ) {
     this.data = {};
     this.dom = document.createElement('div');
     this.dom.classList.add("weatherjs");
+    this.dom.id = this.id;
 
     this.render = function () {
         this.data = this.data;
@@ -99,15 +100,17 @@ WeatherJS.prototype.Widget = function ( location ) {
 /**
  * Method generates weather widget for the `location` city, as a dom element.
  */
-WeatherJS.prototype.createWidget = function ( elementId, location ) {
-    var widget = new WeatherJS.prototype.Widget( location );
-    widget.update();
+WeatherJS.prototype.createWidget = function ( parentId, location ) {
+    var parent = document.getElementById( parentId ),
+        widget = null;
 
-    this.widgets[ widget.id ] = widget;
+    if ( parent !== null ) {
+        widget = new WeatherJS.prototype.Widget( location );
+        widget.update();
 
-    var elem = document.getElementById( elementId );
-    if ( elem !== null ) {
-        elem.appendChild( widget.dom );
+        this.widgets[ widget.id ] = widget;
+
+        parent.appendChild( widget.dom );
     }
 
     return widget;
